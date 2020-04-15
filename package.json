@@ -1,0 +1,51 @@
+{
+  "name": "ui-test-sangheon",
+  "version": "1.0.1",
+  "module": "dist/index.js",
+  "main": "index.js",
+  "license": "MIT",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-docs": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "@svgr/rollup": "^5.3.1",
+    "autoprefixer": "^9.7.6",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-named-asset-import": "^0.3.6",
+    "babel-preset-react-app": "^9.1.2",
+    "css-loader": "^3.5.2",
+    "node-sass": "^4.13.1",
+    "postcss": "^7.0.27",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "rollup": "^2.6.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-sass": "^1.2.2",
+    "rollup-plugin-url": "^3.0.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "build": "rollup -c",
+    "build:types": "tsc --emitDeclarationOnly"
+  },
+  "peerDependencies": {
+    "node-sass": "^4.13.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
