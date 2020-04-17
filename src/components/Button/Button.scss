@@ -1,5 +1,198 @@
+$light-gray: #eeeeee;
+$gray: #666666;
+$blue: #1e59ea;
+$white: #fff;
+
+@keyframes shrink {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(0.98, 0.98, 0.98);
+  }
+}
+
+@mixin button-color($color) {
+  background: $color;
+
+  &:hover {
+    background: darken($color, 10%);
+    color: $blue;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: shrink;
+  }
+
+  &:active {
+    background: darken($color, 10%);
+  }
+
+  &.outline {
+    color: $color;
+    background: none;
+    border: 2px solid $color;
+
+    &:hover {
+      background: lighten($color, 10%);
+      color: $white;
+    }
+
+    &:active {
+      background: darken($color, 10%);
+      color: $white;
+    }
+  }
+
+  &:disabled {
+    &:hover {
+      color: transparent;
+    }
+  }
+}
+
 .Button {
-  width: 100%;
-  height: 50px;
-  background-color: powderblue;
+  outline: none;
+  font-weight: 600;
+  background: $blue;
+
+  &:disabled {
+    background-color: $gray;
+    color: rgba(0, 0, 0, 0.4);
+
+    &:hover {
+      background-color: $gray;
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    &:active {
+      background-color: $gray;
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &.small {
+    width: 106px;
+    height: 38px;
+    border-radius: 4px;
+    border-top-right-radius: 16px;
+    font-size: 16px;
+  }
+
+  &.medium {
+    width: 125px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    border-top-right-radius: 13px;
+    font-family: "Noto Sans KR";
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 35px;
+      font-size: 13px;
+      border-top-right-radius: 15px;
+    }
+  }
+
+  &.large {
+    width: 352px;
+    height: 70px;
+    border-radius: 10px;
+    font-size: 20px;
+    border-top-right-radius: 25px;
+    font-family: "Noto Sans KR";
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 65px;
+    }
+  }
+
+  &.community-edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    height: 33px;
+    font-size: 14px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+    text-align: left;
+    color: $white;
+    padding: 5px 14px;
+    background: $gray;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: $white !important;
+  }
+
+  &.join {
+    width: 137px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    font-size: 16px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 35px;
+      font-size: 12px;
+    }
+  }
+
+  &.light-gray {
+    @include button-color($light-gray);
+    border: solid 1px $blue;
+    color: #666666;
+  }
+
+  &.blue {
+    @include button-color($blue);
+    color: white;
+  }
+
+  &.gray {
+    @include button-color($white);
+    border: solid 2px $gray;
+    color: $gray;
+    &:hover {
+      @include button-color($gray);
+      color: $white;
+    }
+  }
+
+  &.full-gray {
+    background-color: $gray;
+    border: solid 1px $gray;
+    color: $white;
+
+    &:hover {
+      color: $gray !important;
+      background-color: $white;
+    }
+  }
+
+  &.white {
+    background-color: $white;
+    border: solid 2px $blue;
+    color: $blue;
+    &:hover {
+      background-color: $blue;
+    }
+  }
+
+  &.right {
+    border-radius: 4px;
+    border-top-right-radius: 24px;
+  }
+
+  &.left {
+    border-radius: 4px;
+    border-top-left-radius: 24px;
+  }
 }

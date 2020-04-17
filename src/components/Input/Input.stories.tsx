@@ -10,18 +10,14 @@ export default {
 };
 
 export const input = () => {
-  const placeholder = text("placeholder", "");
+  const placeholder = text("placeholder", "placeholder");
   const view = radios(
     "view",
     { Join: "join", Login: "login", Search: "search" },
     "login"
   );
 
-  const type = radios(
-    "type",
-    { Text: "text", Password: "password" },
-    "password"
-  );
+  const type = radios("type", { Text: "text", Password: "password" }, "text");
 
   const size = select("size", ["large", "small"], "large");
 
