@@ -1,6 +1,6 @@
 {
   "name": "ui-test-sangheon",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "module": "dist/index.js",
   "main": "index.js",
   "license": "MIT",
@@ -39,7 +39,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -c .storybook -o public",
     "build": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly"
   },
