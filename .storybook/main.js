@@ -4,6 +4,11 @@ module.exports = {
     "@storybook/addon-knobs",
     "@storybook/addon-actions",
     "@storybook/addon-links",
+    {
+      name: "@storybook/addon-docs",
+      options: {
+        configureJSX: true,
+      },
+    },
   ],
-  presets: ["@storybook/addon-docs/react/preset"],
 };
