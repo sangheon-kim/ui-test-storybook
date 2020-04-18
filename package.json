@@ -1,6 +1,6 @@
 {
   "name": "ui-test-sangheon",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "module": "dist/index.js",
   "main": "index.js",
   "license": "MIT",
