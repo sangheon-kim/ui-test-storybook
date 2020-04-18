@@ -1,3 +1,7 @@
+'use strict';
+
+
+
 function ___$insertStyle(css) {
   if (!css) {
     return;
@@ -14,7 +18,12 @@ function ___$insertStyle(css) {
   return css;
 }
 
-import React__default, { createElement } from 'react';
+Object.defineProperty(exports, '__esModule', { value: true });
+
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
+var React = require('react');
+var React__default = _interopDefault(React);
 
 function _objectWithoutPropertiesLoose(source, excluded) {
   if (source == null) return {};
@@ -62,7 +71,7 @@ var Button = function Button(_ref) {
       color = _ref.color,
       rest = _objectWithoutProperties(_ref, ["children", "size", "className", "outline", "direction", "color"]);
 
-  return /*#__PURE__*/createElement("button", Object.assign({
+  return /*#__PURE__*/React.createElement("button", Object.assign({
     className: "Button ".concat(size, " ").concat(color, " ").concat(direction, " ").concat(outline ? "outline" : "none", " ").concat(className)
   }, rest), children);
 };
@@ -76,22 +85,22 @@ ___$insertStyle(".c-Input {\n  display: flex;\n  align-items: center;\n}\n.c-Inp
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-var _ref = /*#__PURE__*/createElement("defs", null, /*#__PURE__*/createElement("clipPath", {
+var _ref = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
   id: "search_svg__clip-path"
-}, /*#__PURE__*/createElement("path", {
+}, /*#__PURE__*/React.createElement("path", {
   d: "M0 0h30v30H0z",
   className: "search_svg__cls-1"
-})), /*#__PURE__*/createElement("style", null, ".search_svg__cls-1{fill:none}"));
+})), /*#__PURE__*/React.createElement("style", null, ".search_svg__cls-1{fill:none}"));
 
-var _ref2 = /*#__PURE__*/createElement("g", {
+var _ref2 = /*#__PURE__*/React.createElement("g", {
   id: "search_svg__Search",
   clipPath: "url(#search_svg__clip-path)"
-}, /*#__PURE__*/createElement("path", {
+}, /*#__PURE__*/React.createElement("path", {
   id: "search_svg__Rectangle_176",
   d: "M0 0h30v30H0z",
   className: "search_svg__cls-1",
   "data-name": "Rectangle 176"
-}), /*#__PURE__*/createElement("path", {
+}), /*#__PURE__*/React.createElement("path", {
   id: "search_svg__Path_99",
   d: "M29.9 27.267l-6.206-6.206a12.875 12.875 0 002.633-7.9A13.083 13.083 0 0013.164 0 13.083 13.083 0 000 13.164a13.083 13.083 0 0013.164 13.163 12.875 12.875 0 007.9-2.633l6.203 6.206zM3.761 13.164a9.311 9.311 0 019.4-9.4 9.311 9.311 0 019.4 9.4 9.311 9.311 0 01-9.4 9.4 9.311 9.311 0 01-9.4-9.4z",
   "data-name": "Path 99",
@@ -99,7 +108,7 @@ var _ref2 = /*#__PURE__*/createElement("g", {
 }));
 
 function SvgSearch(props) {
-  return /*#__PURE__*/createElement("svg", _extends({
+  return /*#__PURE__*/React.createElement("svg", _extends({
     width: 30,
     height: 30
   }, props), _ref, _ref2);
@@ -150,9 +159,9 @@ var Input = function Input(_ref) {
     }
   };
 
-  return /*#__PURE__*/createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "c-Input"
-  }, /*#__PURE__*/createElement("input", Object.assign({
+  }, /*#__PURE__*/React.createElement("input", Object.assign({
     className: "Input ".concat(className, " ").concat(size, " ").concat(view),
     name: name,
     value: value,
@@ -163,7 +172,7 @@ var Input = function Input(_ref) {
       view === "search" && handleEnter(e);
     },
     autoComplete: view === "search" ? "off" : "on"
-  }, rest)), view === "search" && /*#__PURE__*/createElement(Icon, {
+  }, rest)), view === "search" && /*#__PURE__*/React.createElement(Icon, {
     icon: "search"
   }));
 };
@@ -173,4 +182,5 @@ Input.defaultProps = {
   type: "text"
 };
 
-export { Button, Input };
+exports.Button = Button;
+exports.Input = Input;
