@@ -24,7 +24,7 @@
     "babel-preset-react-app": "^9.1.2",
     "css-loader": "^3.5.2",
     "node-sass": "^4.13.1",
-    "postcss": "^7.0.27",
+    "postcss": "^7.0.36",
     "react-docgen-typescript-loader": "^3.7.2",
     "rollup": "^2.6.1",
     "rollup-plugin-babel": "^4.4.0",
