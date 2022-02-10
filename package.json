@@ -23,7 +23,7 @@
     "babel-plugin-named-asset-import": "^0.3.6",
     "babel-preset-react-app": "^9.1.2",
     "css-loader": "^3.5.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "postcss": "^7.0.27",
     "react-docgen-typescript-loader": "^3.7.2",
     "rollup": "^2.6.1",
@@ -44,7 +44,7 @@
     "build:types": "tsc --emitDeclarationOnly"
   },
   "peerDependencies": {
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
